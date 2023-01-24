@@ -1,0 +1,474 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color-1: #fdece2;
+    --main-color-2: #8c6c5b;
+    --main-color-3: #e1bb81;
+    --main-color-4: #e7d9d1;
+    --grey-alpha-1: #475467;
+    --grey-alpha-2: #7d8590;
+    --grey-alpha-3: #c0c4c9;
+    --grey-alpha-4: #ededed;
+    --grey-alpha-5: #f1f1f1;
+    --black-color: #1c1c1b;
+    --headline-1: 40px;
+    --headline-2: 36px;
+    --headline-3: 32px;
+    --headline-4: 24px;
+    --headline-5: 18px;
+    --line-height: 120%;
+    --body-1: 18px;
+    --body-2: 16px;
+    --body-3: 14px;
+    --body-4: 12px;
+    --bg-color: #fff7f3;
+}
+h1,
+h2 {
+    font-family: 'Pacifico', cursive;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+.btn {
+    height: 48px;
+    width: 239px;
+    border: none;
+    padding: 10px 20px 10px 20px;
+    font-size: var(--body-2);
+    background-color: var(--main-color-1);
+    color: var(--main-color-2);
+    font-family: 'Roboto', sans-serif;
+    line-height: 22px;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    cursor: pointer;
+}
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--main-color-1);
+    height: 90px;
+    width: 100%;
+}
+.nav-layout-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1350px;
+}
+nav .nav-links {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 30px;
+}
+nav .nav-links li {
+    color: var(--main-color-2);
+    text-decoration: none;
+}
+nav .nav-links a {
+    text-decoration: none;
+    color: var(--main-color-2);
+    font-weight: 500;
+    font-size: var(--body-2);
+    line-height: 22px;
+    letter-spacing: 0.15em;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav .footer-links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+header .hero-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: grid;
+    place-items: center;
+}
+header .hero-container::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background: linear-gradient(
+        180deg,
+        rgba(247, 238, 233, 0.5) 30%,
+        #f7eee9 100%
+    );
+}
+header .hero-container video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+header .hero-container .hero-header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 220;
+    align-items: center;
+    justify-content: center;
+}
+.hero-container .hero-header h1 {
+    font-size: var(--headline-1);
+    color: var(--main-color-2);
+}
+.hero-container .hero-header p {
+    font-size: var(--body-1);
+    color: var(--main-color-3);
+}
+
+footer {
+    background-color: var(--main-color-1);
+    height: 448px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 75px 0px;
+}
+footer .footer-layout-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1350px;
+}
+footer .footer-layout-container .footer-logo {
+    width: 120px;
+}
+footer .footer-layout-container .nav-links a {
+    text-decoration: none;
+    color: var(--main-color-2);
+    font-weight: 500;
+    font-size: var(--body-2);
+    line-height: 22px;
+    letter-spacing: 0.15em;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer .footer-layout-container .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-top: 25px;
+    margin-bottom: 70px;
+}
+footer .footer-layout-container .footer-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 37px;
+    border-top: 1px solid #e7d9d1;
+}
+footer .footer-layout-container .footer-container .copyright-content {
+    color: var(--main-color-3);
+}
+footer .footer-layout-container .footer-container .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: var(--main-color-2);
+}
+footer .footer-layout-container a,
+footer .footer-layout-container p {
+    gap: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: var(--body-3);
+    line-height: 120%;
+    letter-spacing: 0.15em;
+    color: var(--main-color-2);
+    text-decoration: none;
+}
+footer
+    .footer-layout-container
+    .footer-container
+    .footer-content
+    .footer-links-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+footer
+    .footer-layout-container
+    .footer-container
+    .footer-content
+    .footer-links-container
+    a {
+    display: grid;
+    place-items: center;
+}
+
+/* Wedding Section*/
+.common-section {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+}
+.common-reverse {
+    flex-direction: row-reverse;
+}
+.common-section .common-content h1 {
+    font-size: var(--headline-3);
+    color: var(--main-color-2);
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: 0.1em;
+}
+.common-section .common-content p {
+    font-weight: 400;
+    font-size: var(--body-1);
+    color: var(--main-color-3);
+    line-height: 25px;
+    letter-spacing: 0.15em;
+}
+.common-section .common-content {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+    height: 100%;
+}
+.common-section .common-img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.common-section .common-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.common-section .common-img video {
+    width: 90%;
+    height: 85%;
+    object-fit: cover;
+}
+.common-section .common-video {
+    background-color: var(--grey-alpha-5);
+}
+
+/*PORTOFOLIO*/
+.portofolio-body-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 75px;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    width: 1350px;
+    gap: 75px;
+}
+
+.portofolio-container {
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.portofolio-container h1 {
+    font-size: var(--headline-1);
+    color: var(--main-color-2);
+    font-weight: 400;
+}
+.portofolio-container p {
+    font-size: var(--body-1);
+    color: var(--main-color-3);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.portofolio-content-container {
+    background-color: var(--bg-color);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 75px;
+}
+.portofolio-content-container h1 {
+    font-size: var(--headline-3);
+    color: var(--black-color);
+}
+.portofolio-content-container p {
+    color: var(--grey-alpha-2);
+    font-size: var(--body-1);
+}
+.wedding-gallery-container {
+    display: flex;
+    width: 100%;
+    height: 400px;
+}
+.wedding-gallery-container img {
+    min-width: 0;
+    flex: 1 1 10px;
+    object-fit: cover;
+    opacity: 0.5;
+    transition: 0.5s;
+}
+.wedding-gallery-container img:hover {
+    flex: 1 1 450px;
+    opacity: 1;
+}
+.header-portofolio-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.header-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/*CONTACT*/
+
+.contact-body-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 75px;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+.contact-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+
+.header-contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.header-contact-content-container h1 {
+    font-size: var(--headline-2);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+}
+.header-contact-content-container p {
+    color: var(--grey-alpha-2);
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+}
+.cards-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--main-color-1);
+    height: 210px;
+    width: 315px;
+    border-radius: 15px;
+    padding: 30px;
+    gap: 10px;
+}
+.card-container h1 {
+    font-size: var(--headline-5);
+    color: var(--main-color-2);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+}
+.card-container p {
+    font-size: var(--body-3);
+    color: var(--main-color-4);
+}
+.card-container a {
+    text-decoration: none;
+    font-size: var(--body-3);
+    color: var(--main-color-3);
+}
+.map-container {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: space-between;
+}
+.map-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.map-content-container h1 {
+    color: var(--main-color-2);
+    font-size: var(--headline-2);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+}
+.map-content-container p {
+    color: var(--main-color-3);
+    font-size: var(--body-1);
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+}
+.location-map {
+    background: var(--grey-alpha-5);
+}
+.email-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.email-content-container h1 {
+    color: var(--black-color);
+    font-size: var(--headline-2);
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 0.1em;
+}
+.email-content-container p {
+    color: var(--grey-alpha-1);
+    font-size: var(--body-1);
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 0.15em;
+}
+.email-input-container {
+    display: flex;
+    gap: 75px;
+}
