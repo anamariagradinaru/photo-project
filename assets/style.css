@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 :root {
     --main-color-1: #fdece2;
@@ -35,7 +36,7 @@ p {
 }
 .btn {
     height: 48px;
-    width: 239px;
+    width: max-content;
     border: none;
     padding: 10px 20px 10px 20px;
     font-size: var(--body-2);
@@ -46,6 +47,10 @@ p {
     letter-spacing: 0.15em;
     font-weight: 500;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 header {
     width: 100%;
@@ -377,7 +382,6 @@ footer
 .header-contact-content-container h1 {
     font-size: var(--headline-2);
     font-weight: 400;
-    line-height: 120%;
     letter-spacing: 0.1em;
 }
 .header-contact-content-container p {
@@ -419,18 +423,24 @@ footer
     font-size: var(--body-3);
     color: var(--main-color-3);
 }
+
+/* Map Section */
 .map-container {
     display: flex;
     width: 100%;
     height: 60vh;
     justify-content: space-between;
 }
+
 .map-content-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    width: 50%;
+    height: 100%;
+    background-color: var(--main-color-1);
 }
 .map-content-container h1 {
     color: var(--main-color-2);
@@ -448,27 +458,348 @@ footer
 }
 .location-map {
     background: var(--grey-alpha-5);
+    width: 50%;
+    height: 100%;
 }
-.email-content-container {
+.location-map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* CTA Section */
+.cta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+.cta-header {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-.email-content-container h1 {
+.cta-header h1 {
     color: var(--black-color);
     font-size: var(--headline-2);
     font-weight: 400;
     line-height: 120%;
     letter-spacing: 0.1em;
 }
-.email-content-container p {
+.cta-header p {
     color: var(--grey-alpha-1);
     font-size: var(--body-1);
     font-weight: 400;
     line-height: 140%;
     letter-spacing: 0.15em;
 }
-.email-input-container {
+.cta-form-container {
     display: flex;
+    width: 100%;
+    height: 718px;
     gap: 75px;
+}
+.email-image-container {
+    width: 50%;
+    height: 100%;
+}
+.email-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cta-form-container input,
+textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--grey-alpha-3);
+    outline: none;
+    padding: 12px 16px 12px 16px;
+}
+.cta-form-container label {
+    font-size: var(--body-3);
+    color: #344054;
+}
+
+.cta-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    gap: 30px;
+}
+.cta-content-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cta-content-group textarea {
+    height: 150px;
+    resize: none;
+}
+
+.cta-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cta-options .cta-options-container {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    gap: 30px;
+}
+.cta-options .cta-options-container .cta-options-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cta-options .cta-options-container .cta-content-group {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: auto;
+}
+.cta-container .cta-btn {
+    width: 100%;
+}
+
+.cta-container .cta-content-group input {
+    width: unset;
+}
+.cta-content-group label,
+.cta-content-group textarea,
+.cta-content-group input {
+    color: var(--grey-alpha-1);
+    font-size: var(--body-3);
+    letter-spacing: 0.15em;
+}
+.cta-options h3 {
+    font-size: var(--body-3);
+    color: var(--grey-alpha-1);
+    letter-spacing: 0.15em;
+}
+
+@media (max-width: 1050px) {
+    :root {
+        --headline-1: 36px;
+        --headline-2: 32px;
+        --headline-3: 24px;
+        --headline-4: 18px;
+        --headline-5: 16px;
+
+        --body-1: 16px;
+        --body-2: 14px;
+        --body-3: 12px;
+    }
+
+    nav .nav-layout-container,
+    .layout-container {
+        width: 90vw;
+    }
+    .hero-header p,
+    .hero-header h1 {
+        width: 90%;
+    }
+    .common-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: unset;
+    }
+    .common-content {
+        width: 100% !important;
+        padding: 50px 0px;
+    }
+    .common-content h1,
+    .common-content p {
+        width: 90%;
+    }
+    .common-img {
+        width: 100% !important;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    footer .footer-layout-container .footer-container {
+        width: unset;
+    }
+    footer .footer-layout-container,
+    header .portofolio-container,
+    .map-content-container {
+        width: 90vw;
+    }
+    header .portofolio-container p,
+    header .portofolio-container h1,
+    .footer-container,
+    .common-content h1,
+    .common-content p,
+    .hero-header p,
+    .hero-header h1,
+    .map-content-container,
+    .cta-header {
+        text-align: center;
+    }
+    .header-portofolio-container,
+    .cta-content-container {
+        width: 100%;
+    }
+    .layout-container
+        .portofolio-content-container
+        .header-portofolio-container
+        p,
+    .layout-container
+        .portofolio-content-container
+        .header-portofolio-container
+        h1 {
+        text-align: left;
+    }
+    .portofolio-content-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .wedding-gallery-container {
+        flex-direction: column;
+        height: unset;
+        width: 90vw;
+    }
+    .header-contact-container {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards-container {
+        flex-direction: column;
+    }
+    .map-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .email-image-container,
+    .location-map {
+        width: 100%;
+    }
+    .cta-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .cta-form-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .cta-options-container {
+        gap: 10px !important;
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 550px) {
+    nav {
+        height: 70px;
+    }
+    .social-media-links {
+        display: none !important;
+    }
+    nav .nav-links {
+        gap: 15px;
+    }
+    nav .nav-links a {
+        font-weight: 400;
+    }
+    .nav-layout-container img {
+        width: 100px;
+    }
+    .hero-container .hero-header h1 {
+        text-align: center;
+    }
+    .common-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: unset;
+    }
+
+    .common-content {
+        width: 100% !important;
+        padding: 50px 0px;
+    }
+    .common-content h1 {
+        text-align: center;
+    }
+    .common-img {
+        width: 100% !important;
+    }
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    .footer-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .portofolio-container {
+        text-align: center;
+    }
+    .portofolio-content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .wedding-gallery-container {
+        display: flex;
+        flex-direction: column;
+        height: unset;
+    }
+    .header-contact-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    .location-map,
+    .email-image-container,
+    .map-content-container,
+    .cta-content-container,
+    .wedding-gallery-container {
+        width: 100%;
+    }
+    .header-contact-content-container {
+        width: 80%;
+    }
+    .cards-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-container {
+        width: 100%;
+    }
+    .map-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cta-container {
+        justify-content: center;
+        align-items: center;
+    }
+    .cta-form-container {
+        flex-direction: column;
+        height: auto;
+    }
+    .cta-options-container {
+        gap: 10px !important;
+        grid-template-columns: 1fr !important;
+    }
 }
